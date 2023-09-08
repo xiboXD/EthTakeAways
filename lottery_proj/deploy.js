@@ -16,7 +16,7 @@ const deploy = async () => {
   console.log('Attempting to deploy from account', accounts[0]);
 
   const result = await new web3.eth.Contract(JSON.parse(interface))
-    .deploy({ data: bytecode, arguments: ['Xibo'] })
+    .deploy({ data: bytecode })
     .send({ gas: '1000000', from: accounts[0] });
 
   console.log('Contract deployed to', result.options.address);
@@ -24,6 +24,5 @@ const deploy = async () => {
 };
 deploy();
 
-
 //Attempting to deploy from account 0xcc67904023B8cd3969cd2E25d282d72fdA1AE941
-//Contract deployed to 0x96E99D25dc52c860e1A22Bf83Ce029c1B1017ac9
+//Contract deployed to 0x2066c2E4d90d71f4d187F3087D2246c1863411fD
